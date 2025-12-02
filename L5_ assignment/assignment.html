@@ -4,8 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L5 Assignment</title>
+    <link href="./styles.css" rel="stylesheet">
 </head>
 <body>
-    
+    <h2>Applying to Umbrella Corp.</h2>
+    <p>Submitting a respectable application is critical to securing a spot as a researcher at Umbrella. Here at the Umbrella Corporation, our business is life itself. Responsibility, determination, and intelligence are key to success, alongside hunger. Apply now.</p>
+    <video autoplay controls width="520" height="300">
+    <source src="menacingvideo.mp4" type="video/mp4"/>
+    Your video is not videoing, sorry.
+    </video>
+    <!--Decided on POST rather than GET because of the sensitive nature of some of the questions (the checkbox ones, in particular). Even though Umbrella is evil, they are not THAT evil.-->
+    <form class="responsive-form" method="post" action="https://httpbin.org/post">
+        <br><label for="fullname">Full Name:</label>
+        <input type="text" name="fullname" id="fullname" maxlength=30 required><br><br>
+
+        <label for="email">Email address:</label>  
+        <input type="email" id="email" name="email" maxlength=20 required><br>
+
+        <h2>Desired Position:</h2>
+        <input type="radio" id="research" name="position" value="research">
+        <label for="research">Research</label><br>
+        <input type="radio" id="marketing" name="position" value="marketing">
+        <label for="marketing">Marketing</label><br>
+        <input type="radio" id="technology" name="position" value="technology">
+        <label for="technology">Technology</label><br>
+
+        <label for="experience">Prior Experience:</label>
+        <textarea name="experience"></textarea><br><br>
+
+        <label for="resume">Upload Resume:</label>
+        <input type="file" name="resume" id="resume" required><br>
+
+        <h3>Out of curiosity, have you worked for any of these?</h3>
+        <p>(click none if you know what's good for you.)</p>
+        <label for="spider">Spider Pharma</label>
+        <input type="checkbox" name="spider">
+        <label for="solutions">Solutions Corp.</label>
+        <input type="checkbox" name="solutions">
+        <label for="evil">Good Pharma</label>
+        <input type="checkbox" name="evil">
+
+        <h3>Have you experienced any of these symptoms in the past week?</h3>
+        <label for="fever">Fever</label>
+        <input type="checkbox" name="fever">
+        <label for="rashes">Rashes</label>
+        <input type="checkbox" name="rashes">
+        <label for="cannibalism">Cannibalistic Urges</label>
+        <input type="checkbox" name="cannibalism"><br>
+
+        <br><label for="address">... Home Address.</label>
+        <input type="text" name="address" id="address" required><br>
+
+        <br><br><input type="submit">
+    </form>
 </body>
 </html>
